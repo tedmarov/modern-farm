@@ -1,7 +1,5 @@
-// console.log("Welcome to the main module")
+import { createCorn } from "./seeds/corn.js"
 
-import { createPlan } from './plan.js'
+const cornSeed = createCorn()
 
-const yearlyPlan = createPlan()
-
-console.log(yearlyPlan)
+console.log(cornSeed)
