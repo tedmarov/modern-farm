@@ -1,10 +1,10 @@
 import { createCorn } from "./seeds/corn.js"
-import { addPlant } from "./field.js"
-import { usePlants } from "./field.js"
+import { addPlant, usePlants, plantArray } from "./field.js"
+import { plantSeeds } from "./tractor.js"
 
-const cornSeed = createCorn()
 
-const cornPlant = addPlant(cornSeed)
-const cornField = usePlants(cornPlant)
+plantSeeds()
+addPlant()
+usePlants()
 
-console.log(cornField)
+ console.log(plantArray)
