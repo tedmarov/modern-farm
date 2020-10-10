@@ -1,12 +1,12 @@
 export const createAsparagus = () => {
 
-    const asparagusArray = 
+    const foodPlant = 
         {
         type: "Asparagus",
         height: 24,
         output: 4
     }
 
-    return asparagusArray
+    return foodPlant
 
 }

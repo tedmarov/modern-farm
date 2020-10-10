@@ -1,14 +1,20 @@
-const fieldArray = [
+import { plantSeeds } from "./tractor.js"
+
+const plantArray = [
     
 ]
 
-export const addPlant = (seedObj) => {
-    if (Array.isArray(seedObj) == true) {
-        fieldArray.push(seedObj) }
-    else {
-        fieldArray.push(seedObj) }
-}
 
 export const usePlants = () => {
-    return fieldArray.slice()
+    return plantArray.slice()
 }
+
+export const addPlant = (seedObj) => {
+    if (Array.isArray(seedObj) === true) {
+        plantArray.push(seedObj) }
+    else {
+        plantArray.push(seedObj) }
+        return seedObj
+    }
+
+plantArray = plantSeeds()
