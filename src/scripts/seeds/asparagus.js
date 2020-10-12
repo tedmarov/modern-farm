@@ -1,12 +1,12 @@
 export const createAsparagus = () => {
 
-    const foodPlant = 
+    const asparagusSeed = 
         {
         type: "Asparagus",
         height: 24,
         output: 4
     }
 
-    return foodPlant
+    return asparagusSeed
 
 }

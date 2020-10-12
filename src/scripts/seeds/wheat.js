@@ -1,10 +1,10 @@
 export const createWheat = () => {
-    const foodPlant = {
+    const wheatSeed = {
         type: "Wheat",
         height: 230,
         output: 6
     }
 
-    return foodPlant
+    return wheatSeed
 
 }

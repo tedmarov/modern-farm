@@ -1,6 +1,6 @@
 
 export const createCorn = () => {
-    const foodPlant = [
+    const cornSeed = [
     {
         type: "Corn",
         height: 180,
@@ -14,6 +14,6 @@ export const createCorn = () => {
 
     ]
 
-    return foodPlant
+    return cornSeed
 
 }

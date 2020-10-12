@@ -1,8 +1,6 @@
 import { plantSeeds } from "./tractor.js"
 
-const plantArray = [
-    
-]
+let plantArray = []
 
 
 export const usePlants = () => {
@@ -11,10 +9,12 @@ export const usePlants = () => {
 
 export const addPlant = (seedObj) => {
     if (Array.isArray(seedObj) === true) {
-        plantArray.push(seedObj) }
+        plantArray.concat(seedObj) }
     else {
-        plantArray.push(seedObj) }
+        plantArray.concat(seedObj) }
         return seedObj
     }
 
-plantArray = plantSeeds()
+/*plantArray = plantSeeds(plantArray)
+
+console.log(plantArray)*/
