@@ -1,10 +1,13 @@
-import { createCorn } from "./seeds/corn.js"
-import { addPlant, usePlants, plantArray } from "./field.js"
+// import { createCorn } from "./seeds/corn.js"
+import { createPlan } from "./plan.js"
+import { addPlant, usePlants } from "./field.js"
 import { plantSeeds } from "./tractor.js"
 
+export const yearlyPlan = createPlan()
 
-plantSeeds()
-addPlant()
-usePlants()
+//  const cornSeed = createCorn()
+//  console.log(cornSeed)
 
- console.log(plantArray)
+usePlants(yearlyPlan)
+addPlant(yearlyPlan)
+console.log(plantSeeds(yearlyPlan))
