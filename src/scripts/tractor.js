@@ -5,63 +5,80 @@ import { createSoybean } from "./seeds/soybean.js"
 import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 import { addPlant } from "./field.js"
-import { createPlan } from "./plan.js"
+
+export const plantSeeds = (plan) => {
+    plan.forEach(row => {
+        row.forEach(plantType => {
+            switch (plantType) {
+                case "Asparagus":
+                    addPlant(createAsparagus())
+                    break
+                case "Corn":
+                    addPlant(createCorn())
+                    break
+                case "Potato":
+                    addPlant(createPotato())
+                    break
+                case "Soybean":
+                    addPlant(createSoybean())
+                    break
+                case "Sunflower":
+                    addPlant(createSunflower())
+                    break
+                case "Wheat":
+                    addPlant(createWheat())
+                    break
+                default:
+                    break
+
+            }
+            console.log(plantType)
+        })
+
+})
+}
 
 /* Define and export plantSeeds
     Accept planting plan/define parameter as input */
 
-let yearlyPlan = []
-yearlyPlan = createPlan(yearlyPlan)
 
-export const plantSeeds = (yearlyPlan) =>  {
-    let newPlant = []
-    for (let i = 0; i < yearlyPlan.length; i++) {
-        let subYearlyPlan = yearlyPlan[i];
-        for (let j = 0; j < subYearlyPlan.length; j++) {
-        if (subYearlyPlan[j] === "Asparagus") {
-            newPlant = createAsparagus()
-            addPlant(newPlant); }
-        else if (subYearlyPlan[j] === "Corn") {
-            newPlant = createCorn()
-            addPlant(newPlant); }
-        else if (subYearlyPlan[j] === "Potato") {
-            newPlant = createPotato()
-            addPlant(newPlant); }
-        else if (subYearlyPlan[j] === "Soybean") {
-            newPlant = createSoybean()
-            addPlant(newPlant); }
-        else if (subYearlyPlan[j] === "Sunflower") {
-            newPlant = createSunflower()
-            addPlant(newPlant); }
-        else (subYearlyPlan[j] === "Wheat"); {
-            newPlant = createWheat()
-            addPlant(newPlant) }
-        } 
+// export const plantSeeds = () => {
+//     let result = ""
+//     if ()
+//     else if
+//     else if
+//     else if
+//     else if
+//     else if
+// }
+
+// export const plantSeeds = (plantingPlan) =>  {
+//     let plantedSeeds = {}
+//     for (let i = 0; i < plantingPlan.length; i++) {
+//         let subplantingPlan = plantingPlan[i];
+//         for (let j = 0; j < subplantingPlan.length; j++) {
+//         if (subplantingPlan[j] === "Asparagus") {
+//             plantedSeeds = createAsparagus()
+//             plantingPlan.concat(plantedSeeds); }
+//         else if (subplantingPlan[j] === "Corn") {
+//             plantedSeeds = createCorn() 
+//             addPlant(plantedSeeds); }
+//         else if (subplantingPlan[j] === "Potato") {
+//             plantedSeeds = createPotato()
+//             addPlant(plantedSeeds); }
+//         else if (subplantingPlan[j] === "Soybean") {
+//             plantedSeeds = createSoybean()
+//             addPlant(plantedSeeds); }
+//         else if (subplantingPlan[j] === "Sunflower") {
+//             plantedSeeds = createSunflower()
+//             addPlant(plantedSeeds); }
+//         else (subplantingPlan[j] === "Wheat"); {
+//             plantedSeeds = createWheat()
+//             addPlant(plantedSeeds) }
+//         } 
         
-    }
-return yearlyPlan
+//     }
+// console.log(yearlyPlan)
+// return yearlyPlan
 
-}
-
-
-/*     if (plantingPlan.forEach(plantingPlan === "Asparagus")) {
-    createAsparagus() && plantingPlan.push(asparagusSeed) 
-console.log(plantingPlan) }
-    else if (plantingPlan.forEach(plantingPlan === "Corn")) {
-    createCorn() && plantingPlan.push(cornSeed) }
-    else if (plantingPlan.forEach(plantingPlan === "Potato")) {
-        createPotato() && plantingPlan.push(cornPotato) }
-    else if (plantingPlan.forEach(plantingPlan === "Soybean")) {
-        createSoybean() && plantingPlan.push(cornSoybean) }
-    else if (plantingPlan.forEach(plantingPlan === "Sunflower")) {
-        createSunflower() && plantingPlan.push(cornSunflower) }
-    else (plantingPlan.forEach(plantingPlan === "Wheat")); {
-        createWheat() && plantingPlan.push(wheatSeed) }
-    }            
-    
-
-
-    
-} 
-console.log(subPlantingPlan)
-*/
+// }
