@@ -1,16 +1,14 @@
-// import { plantSeeds } from "./tractor.js"
-
-const plantArray = []
+let emptyField = []
 
 export const addPlant = (seedObj) => {
-    if (Array.isArray(seedObj)) {
-        seedObj.forEach(seed => plantArray.push(seed))
-    }
-    else {
-    plantArray.push(seedObj)
-}
+    if (Array.isArray((seedObj) === true))
+        emptyField.push(seedObj);
+        else
+        emptyField.push(seedObj)
+return emptyField
 }
 
 export const usePlants = () => {
-    plantArray.slice()
+    return emptyField.slice()
 }
+

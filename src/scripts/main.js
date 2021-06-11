@@ -1,10 +1,12 @@
-// import { createCorn } from "./seeds/corn.js"
+import { createCorn } from "./seeds/corn.js"
 import { createPlan } from "./plan.js"
 import { usePlants } from "./field.js"
 import { plantSeeds } from "./tractor.js"
 
+const yearlyPlan = createPlan()
 
-const currentPlan = createPlan()
-plantSeeds(currentPlan)
+console.log(yearlyPlan)
 
-const plantedSeed = usePlants()
+const plantedSeeds = plantSeeds(yearlyPlan)
+
+console.log(plantedSeeds)
