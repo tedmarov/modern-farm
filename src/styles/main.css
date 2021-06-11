@@ -18,19 +18,16 @@ h1,h2,h3,h4,h5,h6 {
   letter-spacing: 2px;
 }
 
-.blue {
-    background-color: aliceblue;
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.green {
-    background-color: darkseagreen;
+.plant {
+    flex-basis: 10%;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 4rem;
 }
-
-.purple {
-    background-color: mediumorchid;
-}
-
-.red {
-    background-color: darksalmon;
-}
-
