@@ -5,6 +5,7 @@ export const harvestPlants = (allHarvested) => {
     let veggiesToBeSold = []
     for (const veggie of allHarvested) {
 
+    return plantsToBeSold
         if (veggie.type != "Corn") {
             for (let i = 0; i < veggie.output; i++) {
                 if (veggie.type == "Potato") {
